@@ -6,7 +6,6 @@ const PALETTE = {
   y: "#ffd23f", // gold
   o: "#ff9f1c", // orange
   r: "#ff4d6d", // red
-  p: "#c77dff", // purple
   c: "#4cc9f0", // cyan
   b: "#3a86ff", // blue
   g: "#56cf8a", // green
