@@ -5,10 +5,6 @@
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const fineMouse = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
-if (!reduceMotion && fineMouse) {
-  initFx();
-}
-
 // ---------- Cursor shapes ----------
 // Each shape is a closed polygon. All shapes are resampled to the same number
 // of points so the outline can be interpolated point by point.
@@ -206,4 +202,9 @@ function initFx() {
     requestAnimationFrame(animate);
   };
   animate();
+}
+
+// Start last, once the shape constants above are initialised
+if (!reduceMotion && fineMouse) {
+  initFx();
 }
