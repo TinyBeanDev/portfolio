@@ -2,10 +2,10 @@
 
 :root {
   --ink: #0b0b1a;
-  --bg: #1a1c2c;
-  --bg-2: #232641;
-  --panel: #2b2f52;
-  --panel-2: #353a66;
+  --bg: #14232b;
+  --bg-2: #1b303a;
+  --panel: #26424c;
+  --panel-2: #2f5260;
   --text: #f4f1de;
   --muted: #a9b1d6;
   --dim: #6b719c;
@@ -14,7 +14,6 @@
   --red: #ff4d6d;
   --cyan: #4cc9f0;
   --green: #56cf8a;
-  --purple: #c77dff;
   --px: 4px;
   --head: "Press Start 2P", monospace;
   --body: "VT323", "Courier New", monospace;
@@ -66,7 +65,7 @@ a { color: inherit; text-decoration: none; }
   top: 0;
   z-index: 11;
   overflow: hidden;
-  background: var(--gold);
+  background: var(--cyan);
   color: var(--ink);
   font-family: var(--head);
   font-size: 10px;
@@ -168,7 +167,7 @@ nav a:hover, nav a.active { color: var(--ink); background: var(--gold); }
   position: relative;
   height: 420px;
   overflow: hidden;
-  background: linear-gradient(to bottom, #0e1030 0%, #2b2f52 70%, #3a2f52 100%);
+  background: linear-gradient(to bottom, #07202c 0%, #1d4152 70%, #2c5a58 100%);
 }
 .sky { position: absolute; inset: 0; }
 .star { position: absolute; width: 8px; height: 8px; background: var(--text); animation: twinkle 2s steps(2) infinite; }
@@ -185,7 +184,7 @@ nav a:hover, nav a.active { color: var(--ink); background: var(--gold); }
   right: 0;
   bottom: 0;
   height: 70px;
-  background: repeating-linear-gradient(90deg, #3d2e4f 0 32px, #32264a 32px 64px);
+  background: repeating-linear-gradient(90deg, #2d5a4f 0 32px, #25493f 32px 64px);
   border-top: var(--px) solid var(--ink);
 }
 .hud-tag {
