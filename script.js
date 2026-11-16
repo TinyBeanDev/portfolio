@@ -38,6 +38,7 @@ function goTo(index, { updateHash = true } = {}) {
 
   slides.forEach((slide, idx) => {
     const active = idx === i;
+    slide.classList.toggle("is-active", active);
     slide.toggleAttribute("inert", !active);
     slide.setAttribute("aria-hidden", String(!active));
   });

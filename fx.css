@@ -1,0 +1,176 @@
+/* Mouse-reactive effects layered on top of styles.css. */
+
+:root {
+  --mx: 50vw;
+  --my: 50vh;
+}
+
+/* Background: cursor spotlight and drifting colour orbs */
+.spotlight,
+.orbs {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.spotlight {
+  background: radial-gradient(
+    600px circle at var(--mx) var(--my),
+    rgba(255, 122, 89, 0.13),
+    transparent 60%
+  );
+}
+.orbs span {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.35;
+  will-change: transform;
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.1, 1);
+}
+.orbs span:nth-child(1) {
+  width: 42vmax;
+  height: 42vmax;
+  left: -10vmax;
+  top: -12vmax;
+  background: #ff7a59;
+  transform: translate3d(var(--ox1, 0px), var(--oy1, 0px), 0);
+}
+.orbs span:nth-child(2) {
+  width: 36vmax;
+  height: 36vmax;
+  right: -12vmax;
+  bottom: -14vmax;
+  background: #3ea6a0;
+  transform: translate3d(var(--ox2, 0px), var(--oy2, 0px), 0);
+}
+.orbs span:nth-child(3) {
+  width: 22vmax;
+  height: 22vmax;
+  left: 52%;
+  top: 40%;
+  background: #7a5cff;
+  opacity: 0.2;
+  transform: translate3d(var(--ox3, 0px), var(--oy3, 0px), 0);
+}
+
+.deck { z-index: 1; }
+.topbar, .controls { z-index: 10; }
+
+/* Slides: text reveals in as a slide becomes active */
+.slide-inner > * {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s var(--ease), transform 0.8s var(--ease);
+}
+.slide.is-active .slide-inner > * {
+  opacity: 1;
+  transform: none;
+}
+.slide.is-active .slide-inner > *:nth-child(2) { transition-delay: 0.08s; }
+.slide.is-active .slide-inner > *:nth-child(3) { transition-delay: 0.16s; }
+.slide.is-active .slide-inner > *:nth-child(4) { transition-delay: 0.24s; }
+.slide.is-active .slide-inner > *:nth-child(5) { transition-delay: 0.32s; }
+.slide.is-active .slide-inner > *:nth-child(6) { transition-delay: 0.4s; }
+
+/* Hero headline: letters lift a little toward the cursor */
+h1 .word {
+  display: inline-block;
+  transition: transform 0.4s var(--ease);
+}
+
+/* Tilting panels with a light sheen that follows the pointer */
+.card,
+.channel,
+.module-tilt,
+.skills article,
+.dossier {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 0.35s var(--ease), border-color 0.2s;
+}
+a.card:hover,
+.channel:hover {
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(-4px);
+}
+.card::after,
+.channel::after,
+.dossier::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    420px circle at var(--sx, 50%) var(--sy, 50%),
+    rgba(255, 255, 255, 0.07),
+    transparent 45%
+  );
+  opacity: var(--sheen, 0);
+  transition: opacity 0.3s;
+}
+
+/* Magnetic buttons */
+.btn,
+.arrow {
+  transform: translate3d(var(--bx, 0px), var(--by, 0px), 0);
+  transition: transform 0.3s var(--ease), background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+/* Dots and nav links react to hover */
+.dots button:hover { transform: scale(1.5); }
+.topbar nav a { position: relative; }
+.topbar nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--ease);
+}
+.topbar nav a:hover::after,
+.topbar nav a.active::after { transform: scaleX(1); }
+
+/* Custom cursor: a ring that follows the pointer and grows over links */
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  width: 34px;
+  height: 34px;
+  margin: -17px 0 0 -17px;
+  border: 1.5px solid var(--text);
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  opacity: 0;
+  transition: width 0.25s var(--ease), height 0.25s var(--ease), margin 0.25s var(--ease), opacity 0.3s;
+}
+.cursor.is-visible { opacity: 0.9; }
+.cursor.is-hover {
+  width: 64px;
+  height: 64px;
+  margin: -32px 0 0 -32px;
+  background: rgba(255, 255, 255, 0.9);
+  border-color: transparent;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.has-fx, body.has-fx a, body.has-fx button { cursor: none; }
+}
+@media (hover: none), (pointer: coarse) {
+  .cursor, .spotlight { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbs, .spotlight, .cursor { display: none; }
+  .slide-inner > * { opacity: 1; transform: none; transition: none; }
+  .card, .channel, .skills article, .dossier,
+  .btn, .arrow { transform: none !important; }
+}
