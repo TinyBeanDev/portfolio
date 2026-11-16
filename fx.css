@@ -5,7 +5,7 @@
   --my: 50vh;
 }
 
-/* Background: cursor spotlight and drifting colour orbs */
+/* Background: cursor spotlight and slowly drifting colour orbs */
 .spotlight,
 .orbs {
   position: fixed;
@@ -20,38 +20,67 @@
     transparent 60%
   );
 }
+
+/* Each orb has two layers: the span follows the mouse (parallax),
+   and its ::before drifts on its own (floating). */
 .orbs span {
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px);
-  opacity: 0.35;
-  will-change: transform;
+  transform: translate3d(var(--ox, 0px), var(--oy, 0px), 0);
   transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.1, 1);
 }
+.orbs span::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--c);
+  filter: blur(90px);
+  opacity: var(--o, 0.35);
+  animation: float var(--dur, 40s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
 .orbs span:nth-child(1) {
+  --c: #ff7a59;
+  --dur: 44s;
   width: 42vmax;
   height: 42vmax;
   left: -10vmax;
   top: -12vmax;
-  background: #ff7a59;
-  transform: translate3d(var(--ox1, 0px), var(--oy1, 0px), 0);
+  --ox: var(--ox1, 0px);
+  --oy: var(--oy1, 0px);
 }
 .orbs span:nth-child(2) {
+  --c: #3ea6a0;
+  --dur: 52s;
+  --delay: -18s;
   width: 36vmax;
   height: 36vmax;
   right: -12vmax;
   bottom: -14vmax;
-  background: #3ea6a0;
-  transform: translate3d(var(--ox2, 0px), var(--oy2, 0px), 0);
+  --ox: var(--ox2, 0px);
+  --oy: var(--oy2, 0px);
 }
 .orbs span:nth-child(3) {
+  --c: #7a5cff;
+  --o: 0.2;
+  --dur: 60s;
+  --delay: -30s;
   width: 22vmax;
   height: 22vmax;
   left: 52%;
   top: 40%;
-  background: #7a5cff;
-  opacity: 0.2;
-  transform: translate3d(var(--ox3, 0px), var(--oy3, 0px), 0);
+  --ox: var(--ox3, 0px);
+  --oy: var(--oy3, 0px);
+}
+
+/* Slow, lazy drift: each orb wanders through a loop of positions and sizes */
+@keyframes float {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  25% { transform: translate3d(7vmax, -5vmax, 0) scale(1.08); }
+  50% { transform: translate3d(-4vmax, 6vmax, 0) scale(0.94); }
+  75% { transform: translate3d(-8vmax, -3vmax, 0) scale(1.04); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
 }
 
 .deck { z-index: 1; }
@@ -73,16 +102,9 @@
 .slide.is-active .slide-inner > *:nth-child(5) { transition-delay: 0.32s; }
 .slide.is-active .slide-inner > *:nth-child(6) { transition-delay: 0.4s; }
 
-/* Hero headline: letters lift a little toward the cursor */
-h1 .word {
-  display: inline-block;
-  transition: transform 0.4s var(--ease);
-}
-
 /* Tilting panels with a light sheen that follows the pointer */
 .card,
 .channel,
-.module-tilt,
 .skills article,
 .dossier {
   position: relative;
@@ -136,35 +158,29 @@ a.card:hover,
 .topbar nav a:hover::after,
 .topbar nav a.active::after { transform: scaleX(1); }
 
-/* Custom cursor: a ring that follows the pointer and grows over links */
-/* --morph runs 0 (ring) to 1 (arrow), set per frame by fx.js.
-   The ring shrinks and loses its outline as the arrow fades in. */
+/* Custom cursor: one SVG path whose points are interpolated between a
+   ring, an arrow and a hand. The SVG is centred on the pointer; the
+   arrow and hand are anchored at the origin so their tip sits on it. */
 .cursor {
-  --m: var(--morph, 0);
   position: fixed;
   left: 0;
   top: 0;
   z-index: 20;
-  width: calc(34px * (1 - var(--m)));
-  height: calc(34px * (1 - var(--m)));
-  margin: calc(-17px * (1 - var(--m))) 0 0 calc(-17px * (1 - var(--m)));
-  border: calc(1.5px * (1 - var(--m))) solid var(--text);
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  overflow: visible;
   pointer-events: none;
   mix-blend-mode: difference;
   opacity: 0;
   transition: opacity 0.3s;
 }
-.cursor.is-visible { opacity: 0.9; }
-.cursor-pointer {
-  position: absolute;
-  left: -1px;
-  top: -1px;
-  width: 22px;
-  height: 22px;
-  fill: var(--text);
-  opacity: var(--m);
-  overflow: visible;
+.cursor.is-visible { opacity: 0.95; }
+.cursor-shape {
+  fill: #fff;
+  stroke: #fff;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -175,6 +191,7 @@ a.card:hover,
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .orbs span::before { animation: none; }
   .orbs, .spotlight, .cursor { display: none; }
   .slide-inner > * { opacity: 1; transform: none; transition: none; }
   .card, .channel, .skills article, .dossier,
