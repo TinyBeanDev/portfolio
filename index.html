@@ -7,34 +7,25 @@
   <title>JAMIE BROWN // PORTFOLIO</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Top status ticker -->
   <div class="ticker" aria-hidden="true">
     <div class="ticker-track">
-      <span>SYS.STATUS: ONLINE</span><span>//</span>
-      <span>AVAILABILITY: OPEN FOR WORK</span><span>//</span>
-      <span>LOCATION: REMOTE / UK</span><span>//</span>
-      <span>BUILD: 2026.11</span><span>//</span>
-      <span>STACK: HTML / CSS / JS / REACT / NEXT</span><span>//</span>
-      <span>SYS.STATUS: ONLINE</span><span>//</span>
-      <span>AVAILABILITY: OPEN FOR WORK</span><span>//</span>
-      <span>LOCATION: REMOTE / UK</span><span>//</span>
-      <span>BUILD: 2026.11</span><span>//</span>
-      <span>STACK: HTML / CSS / JS / REACT / NEXT</span><span>//</span>
+      <span>★ PLAYER 1 READY</span><span>♥ OPEN FOR WORK</span><span>◆ REMOTE / UK</span><span>▲ BUILD 2026.11</span>
+      <span>★ PLAYER 1 READY</span><span>♥ OPEN FOR WORK</span><span>◆ REMOTE / UK</span><span>▲ BUILD 2026.11</span>
     </div>
   </div>
 
   <header class="site-header">
-    <a href="#top" class="logo">Jamie<span>.</span>Brown</a>
+    <a href="#top" class="logo"><span data-sprite="coin" class="sprite sm"></span>JAMIE.BROWN</a>
     <nav>
-      <a href="#work">01 Work</a>
-      <a href="#systems">02 Systems</a>
-      <a href="#profile">03 Profile</a>
-      <a href="#contact">04 Contact</a>
+      <a href="#work">WORK</a>
+      <a href="#systems">SKILLS</a>
+      <a href="#profile">ABOUT</a>
+      <a href="#contact">CONTACT</a>
     </nav>
     <div class="clock" id="clock">--:--:--</div>
   </header>
@@ -45,185 +36,172 @@
     <section class="hero">
       <div class="hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="dot"></span> Available for freelance &amp; full-time work</p>
-          <h1>Designer &amp; developer<br /><span class="gradient-text">building modern web experiences.</span></h1>
+          <p class="badge"><span class="blink-dot"></span> AVAILABLE FOR WORK</p>
+          <h1>I BUILD <span class="hl">WEB</span><br />EXPERIENCES.</h1>
           <p class="lead">
-            I craft fast, accessible, and visually refined websites and applications. Performance first,
-            details always, and no unnecessary weight in the page.
+            Designer and developer making fast, accessible, and charming websites and apps.
+            Pixel-perfect on purpose.
           </p>
           <div class="cta">
-            <a href="#work" class="btn btn-primary">View projects</a>
-            <a href="#contact" class="btn btn-ghost">Open a channel</a>
+            <a href="#work" class="btn btn-primary">VIEW WORK</a>
+            <a href="#contact" class="btn btn-ghost">CONTACT ME</a>
           </div>
           <div class="hero-meta">
             <span>ID: JB-0001</span>
-            <span>CLEARANCE: PUBLIC</span>
             <span>REGION: UK / REMOTE</span>
+            <span>RESPONSE: &lt;48H</span>
           </div>
         </div>
 
-        <aside class="hud-panel" aria-label="Profile readout">
-          <div class="hud-head">
-            <span>PROFILE.READOUT</span>
-            <span class="blink">● LIVE</span>
+        <div class="hero-art pixel-frame" aria-hidden="true">
+          <div class="sky">
+            <div class="star s1"></div><div class="star s2"></div><div class="star s3"></div>
+            <div class="star s4"></div><div class="star s5"></div><div class="star s6"></div>
           </div>
-          <div class="hud-body">
-            <div class="stat"><label>Focus</label><strong>Front-end / Product UI</strong></div>
-            <div class="stat"><label>Primary stack</label><strong>HTML · CSS · JS · React · Next.js</strong></div>
-            <div class="stat"><label>Response time</label><strong>&lt; 48 hours</strong></div>
-            <div class="stat"><label>Public repos</label><strong data-count="1">0</strong></div>
-            <div class="bars">
-              <div class="bar"><span>Design</span><i style="--w: 88%"></i><em>88</em></div>
-              <div class="bar"><span>Front-end</span><i style="--w: 92%"></i><em>92</em></div>
-              <div class="bar"><span>Performance</span><i style="--w: 85%"></i><em>85</em></div>
-              <div class="bar"><span>Accessibility</span><i style="--w: 80%"></i><em>80</em></div>
-            </div>
-          </div>
-          <div class="hud-foot">SCANNING... 0x7F3A · 0x21C9 · 0xE04B</div>
-        </aside>
+          <span data-sprite="ship" class="sprite ship"></span>
+          <div class="ground"></div>
+          <div class="hud-tag">LVL 01 · SCORE <b data-count="9000">0</b></div>
+        </div>
       </div>
     </section>
 
     <!-- STAT STRIP -->
     <section class="strip" aria-label="Key figures">
-      <div class="strip-item"><small>Projects shipped</small><strong>01</strong><span>public repository</span></div>
-      <div class="strip-item"><small>Languages</small><strong>04</strong><span>HTML · CSS · JS · TS</span></div>
-      <div class="strip-item"><small>Lighthouse target</small><strong>100</strong><span>performance goal</span></div>
-      <div class="strip-item"><small>Commit history</small><strong>03</strong><span>on portfolio repo</span></div>
+      <div class="strip-item pixel-frame"><span data-sprite="star" class="sprite sm"></span><small>PROJECTS</small><strong>01</strong></div>
+      <div class="strip-item pixel-frame"><span data-sprite="heart" class="sprite sm"></span><small>LANGUAGES</small><strong>04</strong></div>
+      <div class="strip-item pixel-frame"><span data-sprite="bolt" class="sprite sm"></span><small>PERF GOAL</small><strong>100</strong></div>
+      <div class="strip-item pixel-frame"><span data-sprite="gem" class="sprite sm"></span><small>COMMITS</small><strong>03</strong></div>
     </section>
 
     <!-- WORK -->
     <section id="work" class="section">
       <header class="section-head">
         <span class="section-index">01</span>
-        <h2 class="section-title">Selected work</h2>
-        <span class="section-meta">SECTOR: WEB · STATUS: ACTIVE</span>
+        <h2 class="section-title">WORK</h2>
+        <span class="section-meta">STAGE 1 · CLEARED</span>
       </header>
 
       <div class="grid">
-        <a class="card" href="https://github.com/TinyBeanDev/portfolio" target="_blank" rel="noopener">
-          <div class="card-thumb" style="--hue: 330">
-            <span class="card-code">PRJ-001</span>
-            <span class="card-year">2026</span>
+        <a class="card pixel-frame" href="https://github.com/TinyBeanDev/portfolio" target="_blank" rel="noopener">
+          <div class="card-thumb">
+            <span data-sprite="monitor" class="sprite lg"></span>
           </div>
           <div class="card-body">
-            <h3>This Portfolio</h3>
+            <h3>THIS PORTFOLIO</h3>
             <p>
-              The site you're looking at. Static, dependency-free, with a responsive layout,
-              reduced-motion support, and a HUD-style interface built in plain CSS.
+              The site you're looking at. Static, no frameworks, responsive, and built entirely in
+              plain HTML, CSS and JavaScript.
             </p>
             <dl class="card-specs">
-              <div><dt>Type</dt><dd>Static site</dd></div>
-              <div><dt>Hosting</dt><dd>GitHub Pages</dd></div>
-              <div><dt>Repo</dt><dd>public</dd></div>
+              <div><dt>TYPE</dt><dd>STATIC</dd></div>
+              <div><dt>HOST</dt><dd>GH PAGES</dd></div>
+              <div><dt>REPO</dt><dd>PUBLIC</dd></div>
             </dl>
-            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
           </div>
-          <span class="card-arrow">&rarr;</span>
+          <span class="card-arrow">▶</span>
         </a>
 
-        <div class="card card-empty" aria-label="Upcoming project slot">
+        <div class="card pixel-frame card-empty" aria-label="Upcoming project slot">
           <div class="card-thumb card-thumb-empty">
-            <span class="card-code">PRJ-002</span>
-            <span class="card-year">TBA</span>
+            <span class="card-q">?</span>
           </div>
           <div class="card-body">
-            <h3>Next project</h3>
+            <h3>NEXT PROJECT</h3>
             <p>Slot reserved. Add a case study here when the next build is ready to show.</p>
             <dl class="card-specs">
-              <div><dt>Status</dt><dd>Reserved</dd></div>
-              <div><dt>Type</dt><dd>&mdash;</dd></div>
-              <div><dt>Repo</dt><dd>&mdash;</dd></div>
+              <div><dt>STATUS</dt><dd>LOCKED</dd></div>
+              <div><dt>TYPE</dt><dd>—</dd></div>
+              <div><dt>REPO</dt><dd>—</dd></div>
             </dl>
           </div>
         </div>
       </div>
 
-      <p class="more"><a href="https://github.com/TinyBeanDev" target="_blank" rel="noopener">Full archive on GitHub &rarr;</a></p>
+      <p class="more"><a href="https://github.com/TinyBeanDev" target="_blank" rel="noopener">MORE ON GITHUB ▶</a></p>
     </section>
 
-    <!-- SYSTEMS / SKILLS -->
+    <!-- SKILLS -->
     <section id="systems" class="section">
       <header class="section-head">
         <span class="section-index">02</span>
-        <h2 class="section-title">Systems &amp; capabilities</h2>
-        <span class="section-meta">LOADOUT: ACTIVE</span>
+        <h2 class="section-title">SKILLS</h2>
+        <span class="section-meta">INVENTORY</span>
       </header>
 
       <div class="systems-grid">
-        <article class="module">
-          <header><span>MOD.01</span><h3>Interface engineering</h3></header>
-          <p>Semantic HTML, responsive CSS layout, and component patterns that stay maintainable as a project grows.</p>
-          <ul class="chips"><li>HTML5</li><li>CSS Grid</li><li>Flexbox</li><li>A11y</li></ul>
+        <article class="module pixel-frame">
+          <span data-sprite="monitor" class="sprite md"></span>
+          <h3>INTERFACE</h3>
+          <p>Semantic HTML, responsive CSS layout, and components that stay maintainable as projects grow.</p>
+          <ul class="chips"><li>HTML5</li><li>CSS GRID</li><li>FLEXBOX</li><li>A11Y</li></ul>
         </article>
 
-        <article class="module">
-          <header><span>MOD.02</span><h3>Front-end logic</h3></header>
+        <article class="module pixel-frame">
+          <span data-sprite="bolt" class="sprite md"></span>
+          <h3>LOGIC</h3>
           <p>Vanilla JavaScript when it's enough, React and Next.js when the app needs structure.</p>
-          <ul class="chips"><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Next.js</li></ul>
+          <ul class="chips"><li>JS</li><li>TS</li><li>REACT</li><li>NEXT.JS</li></ul>
         </article>
 
-        <article class="module">
-          <header><span>MOD.03</span><h3>Visual design</h3></header>
-          <p>Layout, typography, and motion designed as one system, with contrast and reduced-motion handled from the start.</p>
-          <ul class="chips"><li>UI</li><li>UX</li><li>Motion</li><li>Type systems</li></ul>
+        <article class="module pixel-frame">
+          <span data-sprite="heart" class="sprite md"></span>
+          <h3>DESIGN</h3>
+          <p>Layout, type and motion designed as one system, with contrast and reduced-motion handled from the start.</p>
+          <ul class="chips"><li>UI</li><li>UX</li><li>MOTION</li><li>TYPE</li></ul>
         </article>
 
-        <article class="module">
-          <header><span>MOD.04</span><h3>Performance &amp; delivery</h3></header>
-          <p>Small bundles, fast first paint, and deploy pipelines that take a commit to a live URL.</p>
-          <ul class="chips"><li>Git</li><li>GitHub Pages</li><li>Lighthouse</li><li>CI</li></ul>
+        <article class="module pixel-frame">
+          <span data-sprite="gem" class="sprite md"></span>
+          <h3>DELIVERY</h3>
+          <p>Small bundles, fast first paint, and a pipeline that takes a commit to a live URL.</p>
+          <ul class="chips"><li>GIT</li><li>PAGES</li><li>LIGHTHOUSE</li><li>CI</li></ul>
         </article>
       </div>
 
-      <div class="ledger">
-        <div class="ledger-row"><span>SKILL</span><span>PROFICIENCY</span><span>LAST USED</span></div>
+      <div class="ledger pixel-frame">
+        <div class="ledger-row"><span>SKILL</span><span>LEVEL</span><span>LAST</span></div>
         <div class="ledger-row"><span>HTML &amp; CSS</span><span class="pips"><i></i><i></i><i></i><i></i><i class="off"></i></span><span>2026</span></div>
-        <div class="ledger-row"><span>JavaScript</span><span class="pips"><i></i><i></i><i></i><i></i><i class="off"></i></span><span>2026</span></div>
-        <div class="ledger-row"><span>React / Next.js</span><span class="pips"><i></i><i></i><i></i><i class="off"></i><i class="off"></i></span><span>2026</span></div>
-        <div class="ledger-row"><span>UI / UX design</span><span class="pips"><i></i><i></i><i></i><i></i><i class="off"></i></span><span>2026</span></div>
+        <div class="ledger-row"><span>JAVASCRIPT</span><span class="pips"><i></i><i></i><i></i><i></i><i class="off"></i></span><span>2026</span></div>
+        <div class="ledger-row"><span>REACT / NEXT</span><span class="pips"><i></i><i></i><i></i><i class="off"></i><i class="off"></i></span><span>2026</span></div>
+        <div class="ledger-row"><span>UI / UX</span><span class="pips"><i></i><i></i><i></i><i></i><i class="off"></i></span><span>2026</span></div>
       </div>
     </section>
 
-    <!-- PROFILE / ABOUT -->
+    <!-- ABOUT -->
     <section id="profile" class="section">
       <header class="section-head">
         <span class="section-index">03</span>
-        <h2 class="section-title">Profile</h2>
-        <span class="section-meta">FILE: DOSSIER.TXT</span>
+        <h2 class="section-title">ABOUT</h2>
+        <span class="section-meta">PLAYER PROFILE</span>
       </header>
 
       <div class="profile-grid">
         <div class="profile-text">
           <p class="lead-small">
-            I'm a designer and developer who cares about the details: performance, accessibility, and the
-            small interactions that make a site feel alive.
+            I'm a designer and developer who cares about the small stuff: performance, accessibility,
+            and the interactions that make a site feel alive.
           </p>
           <p>
-            Replace this with your own story: how you got into building for the web, what you enjoy most,
-            the kinds of problems you like solving, and what you're looking for next.
-          </p>
-          <p>
-            Keep it short and specific. A few concrete sentences about real work land better than
-            a long list of adjectives.
+            Replace this with your own story: how you got into the web, what you enjoy most,
+            and what you're looking for next.
           </p>
         </div>
 
-        <aside class="dossier">
-          <div class="dossier-row"><span>NAME</span><strong>Jamie Brown</strong></div>
-          <div class="dossier-row"><span>ROLE</span><strong>Designer / Developer</strong></div>
-          <div class="dossier-row"><span>LOCATION</span><strong>UK · Remote</strong></div>
-          <div class="dossier-row"><span>LANGUAGES</span><strong>English</strong></div>
-          <div class="dossier-row"><span>STATUS</span><strong class="ok">Open to work</strong></div>
+        <aside class="dossier pixel-frame">
+          <div class="dossier-row"><span>NAME</span><strong>JAMIE BROWN</strong></div>
+          <div class="dossier-row"><span>ROLE</span><strong>DESIGNER / DEV</strong></div>
+          <div class="dossier-row"><span>LOCATION</span><strong>UK · REMOTE</strong></div>
+          <div class="dossier-row"><span>STATUS</span><strong class="ok">OPEN TO WORK</strong></div>
           <div class="dossier-row"><span>GITHUB</span><strong><a href="https://github.com/TinyBeanDev" target="_blank" rel="noopener">TinyBeanDev</a></strong></div>
-          <div class="dossier-row"><span>LINKEDIN</span><strong><a href="https://www.linkedin.com/in/jamie-brown-472b2632a/" target="_blank" rel="noopener">jamie-brown-472b2632a</a></strong></div>
+          <div class="dossier-row"><span>LINKEDIN</span><strong><a href="https://www.linkedin.com/in/jamie-brown-472b2632a/" target="_blank" rel="noopener">jamie-brown</a></strong></div>
         </aside>
       </div>
 
       <div class="timeline">
-        <div class="tl-item"><span class="tl-date">2026.11</span><h4>Portfolio v2 released</h4><p>Restyled with a HUD interface, live GitHub links, and a public repo.</p></div>
-        <div class="tl-item"><span class="tl-date">2026.11</span><h4>Portfolio v1 deployed</h4><p>Static site published to GitHub Pages from the main branch.</p></div>
-        <div class="tl-item"><span class="tl-date">TBA</span><h4>Next milestone</h4><p>Add the next case study, or a dedicated page for each project.</p></div>
+        <div class="tl-item"><span class="tl-date">2026.11</span><h4>PORTFOLIO v2</h4><p>Pixel redesign with live GitHub links.</p></div>
+        <div class="tl-item"><span class="tl-date">2026.11</span><h4>PORTFOLIO v1</h4><p>Static site published to GitHub Pages.</p></div>
+        <div class="tl-item"><span class="tl-date">TBA</span><h4>NEXT LEVEL</h4><p>Add the next case study or project page.</p></div>
       </div>
     </section>
 
@@ -231,44 +209,35 @@
     <section id="contact" class="section contact">
       <header class="section-head">
         <span class="section-index">04</span>
-        <h2 class="section-title">Open a channel</h2>
-        <span class="section-meta">RESPONSE: &lt; 48H</span>
+        <h2 class="section-title">CONTACT</h2>
+        <span class="section-meta">PRESS START</span>
       </header>
 
-      <p class="contact-lead">
-        Have a project, a role, or a question? Send a message and I'll reply within a day or two.
-      </p>
+      <p class="contact-lead">Got a project, a role, or a question? Send a message and I'll reply within a day or two.</p>
 
       <div class="channels">
-        <a class="channel" href="mailto:hello@example.com">
+        <a class="channel pixel-frame" href="mailto:hello@example.com">
+          <span data-sprite="heart" class="sprite md"></span>
           <span class="channel-label">EMAIL</span>
           <strong>hello@example.com</strong>
-          <span class="channel-arrow">&rarr;</span>
         </a>
-        <a class="channel" href="https://www.linkedin.com/in/jamie-brown-472b2632a/" target="_blank" rel="noopener">
+        <a class="channel pixel-frame" href="https://www.linkedin.com/in/jamie-brown-472b2632a/" target="_blank" rel="noopener">
+          <span data-sprite="star" class="sprite md"></span>
           <span class="channel-label">LINKEDIN</span>
           <strong>jamie-brown-472b2632a</strong>
-          <span class="channel-arrow">&rarr;</span>
         </a>
-        <a class="channel" href="https://github.com/TinyBeanDev" target="_blank" rel="noopener">
+        <a class="channel pixel-frame" href="https://github.com/TinyBeanDev" target="_blank" rel="noopener">
+          <span data-sprite="gem" class="sprite md"></span>
           <span class="channel-label">GITHUB</span>
           <strong>TinyBeanDev</strong>
-          <span class="channel-arrow">&rarr;</span>
         </a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-row">
-      <span>&copy; <span id="year"></span> JAMIE BROWN</span>
-      <span>BUILT WITH PLAIN HTML / CSS / JS</span>
-      <span>HOSTED ON GITHUB PAGES</span>
-    </div>
-    <div class="footer-row footer-small">
-      <span>NO TRACKING · NO FRAMEWORKS · NO EXCUSES</span>
-      <span>ALL RIGHTS RESERVED</span>
-    </div>
+    <p>© <span id="year"></span> JAMIE BROWN · MADE WITH PIXELS</p>
+    <p class="small">THANKS FOR PLAYING</p>
   </footer>
 
   <script src="script.js"></script>
