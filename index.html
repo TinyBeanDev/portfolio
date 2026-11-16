@@ -7,12 +7,12 @@
   <title>JAMIE BROWN // PORTFOLIO</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Animated night city (rain, trains, traffic, flickering windows) -->
+  <!-- Pixel night city (rain, trains, traffic, flickering windows) -->
   <canvas id="city" aria-hidden="true"></canvas>
 
   <div class="ticker" aria-hidden="true">
@@ -35,7 +35,7 @@
 
   <main id="top">
 
-    <!-- HERO: first-person view from the desk -->
+    <!-- HERO: you at the desk, seen from the side -->
     <section class="hero">
       <div class="hero-copy">
         <p class="badge"><span class="blink-dot"></span> AVAILABLE FOR WORK</p>
@@ -56,76 +56,16 @@
       </div>
 
       <div class="desk" aria-hidden="true">
-        <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMax slice">
-          <defs>
-            <linearGradient id="deskG" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#3a2a20" />
-              <stop offset="1" stop-color="#170f0b" />
-            </linearGradient>
-            <linearGradient id="jacket" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stop-color="#23232a" />
-              <stop offset="1" stop-color="#0b0b0f" />
-            </linearGradient>
-            <radialGradient id="screenGlow" cx="50%" cy="50%" r="60%">
-              <stop offset="0" stop-color="#5ee7ff" stop-opacity="0.35" />
-              <stop offset="1" stop-color="#5ee7ff" stop-opacity="0" />
-            </radialGradient>
-          </defs>
-
-          <!-- Faint reflection of the rider in the window glass -->
-          <g opacity="0.14" fill="#c9d6ff">
-            <ellipse cx="940" cy="150" rx="40" ry="50" />
-            <path d="M896 140 Q898 84 940 82 Q986 82 986 136 Q976 110 940 108 Q906 110 896 140Z" fill="#7a4a2a" />
-          </g>
-
-          <!-- Desk -->
-          <ellipse cx="600" cy="478" rx="260" ry="26" fill="#5ee7ff" opacity="0.08" />
-          <rect x="0" y="470" width="1200" height="130" fill="url(#deskG)" />
-          <rect x="0" y="468" width="1200" height="4" fill="#5a4234" />
-
-          <!-- Laptop (screen faces you) -->
-          <rect x="470" y="300" width="270" height="170" rx="10" fill="#181b26" stroke="#3a4158" stroke-width="3" />
-          <rect x="486" y="316" width="238" height="138" rx="4" fill="#07101f" />
-          <rect x="486" y="316" width="238" height="138" rx="4" fill="url(#screenGlow)" />
-          <rect x="500" y="330" width="90" height="6" fill="#ff4d8d" />
-          <rect x="500" y="344" width="150" height="6" fill="#5ee7ff" />
-          <rect x="512" y="358" width="120" height="6" fill="#ffd166" />
-          <rect x="512" y="372" width="60" height="6" fill="#56cf8a" />
-          <rect x="500" y="386" width="170" height="6" fill="#5ee7ff" opacity="0.7" />
-          <rect x="512" y="400" width="100" height="6" fill="#ffd166" opacity="0.8" />
-          <rect x="500" y="414" width="40" height="6" fill="#ff4d8d" opacity="0.8" />
-          <rect class="cursor" x="546" y="412" width="8" height="10" fill="#f4f1de" />
-          <path d="M440 462 L760 462 L782 476 L418 476 Z" fill="#23283a" />
-          <rect x="560" y="466" width="80" height="6" rx="3" fill="#10131c" />
-
-          <!-- Hot coffee with steam -->
-          <path d="M860 420 H900 V458 Q900 470 886 470 H874 Q860 470 860 458 Z" fill="#f4f1de" />
-          <path d="M900 428 Q916 428 916 444 Q916 458 900 458" fill="none" stroke="#f4f1de" stroke-width="5" />
-          <ellipse cx="880" cy="420" rx="20" ry="5" fill="#3b2216" />
-          <path class="steam" d="M872 410 q-8 -14 0 -26 q8 -12 0 -24" fill="none" stroke="#e8e0cf" stroke-width="3" stroke-linecap="round" />
-          <path class="steam steam-2" d="M890 410 q-8 -14 0 -26 q8 -12 0 -24" fill="none" stroke="#e8e0cf" stroke-width="3" stroke-linecap="round" />
-
-          <!-- Helmet resting at the side of the desk -->
-          <path d="M980 470 Q978 400 1040 396 Q1104 396 1112 450 L1112 470 Z" fill="#d7263d" />
-          <path d="M1000 440 Q1040 418 1100 430 L1104 452 Q1050 458 1000 456 Z" fill="#0f2233" />
-          <path d="M1012 404 Q1040 400 1062 420" fill="none" stroke="#f4f1de" stroke-width="6" stroke-linecap="round" />
-          <ellipse cx="1030" cy="420" rx="18" ry="6" fill="#ffffff" opacity="0.22" />
-
-          <!-- Rider's arms in leather jacket sleeves, hands on the keyboard -->
-          <path d="M-30 640 Q160 560 478 452" fill="none" stroke="url(#jacket)" stroke-width="88" stroke-linecap="round" />
-          <ellipse cx="486" cy="452" rx="30" ry="20" fill="#c58a62" />
-          <path d="M1230 640 Q1000 560 764 452" fill="none" stroke="url(#jacket)" stroke-width="88" stroke-linecap="round" />
-          <ellipse cx="756" cy="452" rx="30" ry="20" fill="#c58a62" />
-        </svg>
+        <canvas id="desk" width="240" height="150"></canvas>
       </div>
     </section>
 
     <!-- STAT STRIP -->
     <section class="strip" aria-label="Key figures">
-      <div class="panel strip-item"><small>PROJECTS</small><strong>01</strong></div>
-      <div class="panel strip-item"><small>LANGUAGES</small><strong>04</strong></div>
-      <div class="panel strip-item"><small>PERF GOAL</small><strong>100</strong></div>
-      <div class="panel strip-item"><small>COMMITS</small><strong>03</strong></div>
+      <div class="pixel-frame strip-item"><small>PROJECTS</small><strong>01</strong></div>
+      <div class="pixel-frame strip-item"><small>LANGUAGES</small><strong>04</strong></div>
+      <div class="pixel-frame strip-item"><small>PERF GOAL</small><strong>100</strong></div>
+      <div class="pixel-frame strip-item"><small>COMMITS</small><strong>03</strong></div>
     </section>
 
     <!-- WORK -->
@@ -137,7 +77,7 @@
       </header>
 
       <div class="grid">
-        <a class="card panel" href="https://github.com/TinyBeanDev/portfolio" target="_blank" rel="noopener">
+        <a class="card pixel-frame" href="https://github.com/TinyBeanDev/portfolio" target="_blank" rel="noopener">
           <div class="card-thumb">
             <span class="card-glyph">▣</span>
           </div>
@@ -157,7 +97,7 @@
           <span class="card-arrow">▶</span>
         </a>
 
-        <div class="card panel card-empty" aria-label="Upcoming project slot">
+        <div class="card pixel-frame card-empty" aria-label="Upcoming project slot">
           <div class="card-thumb">
             <span class="card-glyph">?</span>
           </div>
@@ -185,32 +125,32 @@
       </header>
 
       <div class="systems-grid">
-        <article class="panel module">
+        <article class="pixel-frame module">
           <h3>INTERFACE</h3>
           <p>Semantic HTML, responsive CSS layout, and components that stay maintainable as projects grow.</p>
           <ul class="chips"><li>HTML5</li><li>CSS GRID</li><li>FLEXBOX</li><li>A11Y</li></ul>
         </article>
 
-        <article class="panel module">
+        <article class="pixel-frame module">
           <h3>LOGIC</h3>
           <p>Vanilla JavaScript when it's enough, React and Next.js when the app needs structure.</p>
           <ul class="chips"><li>JS</li><li>TS</li><li>REACT</li><li>NEXT.JS</li></ul>
         </article>
 
-        <article class="panel module">
+        <article class="pixel-frame module">
           <h3>DESIGN</h3>
           <p>Layout, type and motion designed as one system, with contrast and reduced-motion handled from the start.</p>
           <ul class="chips"><li>UI</li><li>UX</li><li>MOTION</li><li>TYPE</li></ul>
         </article>
 
-        <article class="panel module">
+        <article class="pixel-frame module">
           <h3>DELIVERY</h3>
           <p>Small bundles, fast first paint, and a pipeline that takes a commit to a live URL.</p>
           <ul class="chips"><li>GIT</li><li>PAGES</li><li>LIGHTHOUSE</li><li>CI</li></ul>
         </article>
       </div>
 
-      <div class="ledger panel">
+      <div class="ledger pixel-frame">
         <div class="ledger-row head"><span>SKILL</span><span>LEVEL</span><span>LAST</span></div>
         <div class="ledger-row"><span>HTML &amp; CSS</span><span class="pips"><i></i><i></i><i></i><i></i><i class="off"></i></span><span>2026</span></div>
         <div class="ledger-row"><span>JAVASCRIPT</span><span class="pips"><i></i><i></i><i></i><i></i><i class="off"></i></span><span>2026</span></div>
@@ -239,7 +179,7 @@
           </p>
         </div>
 
-        <aside class="panel dossier">
+        <aside class="pixel-frame dossier">
           <div class="dossier-row"><span>NAME</span><strong>JAMIE BROWN</strong></div>
           <div class="dossier-row"><span>ROLE</span><strong>DESIGNER / DEV</strong></div>
           <div class="dossier-row"><span>LOCATION</span><strong>UK · REMOTE</strong></div>
@@ -250,9 +190,9 @@
       </div>
 
       <div class="timeline">
-        <div class="panel tl-item"><span class="tl-date">2026.11</span><h4>PORTFOLIO v2</h4><p>Night city redesign with live GitHub links.</p></div>
-        <div class="panel tl-item"><span class="tl-date">2026.11</span><h4>PORTFOLIO v1</h4><p>Static site published to GitHub Pages.</p></div>
-        <div class="panel tl-item"><span class="tl-date">TBA</span><h4>NEXT LEVEL</h4><p>Add the next case study or project page.</p></div>
+        <div class="pixel-frame tl-item"><span class="tl-date">2026.11</span><h4>PORTFOLIO v2</h4><p>Pixel night city redesign with live GitHub links.</p></div>
+        <div class="pixel-frame tl-item"><span class="tl-date">2026.11</span><h4>PORTFOLIO v1</h4><p>Static site published to GitHub Pages.</p></div>
+        <div class="pixel-frame tl-item"><span class="tl-date">TBA</span><h4>NEXT LEVEL</h4><p>Add the next case study or project page.</p></div>
       </div>
     </section>
 
@@ -267,15 +207,15 @@
       <p class="contact-lead">Got a project, a role, or a question? Send a message and I'll reply within a day or two.</p>
 
       <div class="channels">
-        <a class="channel panel" href="mailto:hello@example.com">
+        <a class="channel pixel-frame" href="mailto:hello@example.com">
           <span class="channel-label">EMAIL</span>
           <strong>hello@example.com</strong>
         </a>
-        <a class="channel panel" href="https://www.linkedin.com/in/jamie-brown-472b2632a/" target="_blank" rel="noopener">
+        <a class="channel pixel-frame" href="https://www.linkedin.com/in/jamie-brown-472b2632a/" target="_blank" rel="noopener">
           <span class="channel-label">LINKEDIN</span>
           <strong>jamie-brown-472b2632a</strong>
         </a>
-        <a class="channel panel" href="https://github.com/TinyBeanDev" target="_blank" rel="noopener">
+        <a class="channel pixel-frame" href="https://github.com/TinyBeanDev" target="_blank" rel="noopener">
           <span class="channel-label">GITHUB</span>
           <strong>TinyBeanDev</strong>
         </a>
@@ -288,6 +228,7 @@
     <p class="small">THANKS FOR STOPPING BY</p>
   </footer>
 
+  <script src="scene.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
