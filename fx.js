@@ -44,15 +44,32 @@ function initFx() {
 
   document.addEventListener("pointerleave", () => cursor.classList.remove("is-visible"));
 
-  // Ring grows over interactive elements
-  const interactive = "a, button, .dots button";
-  document.addEventListener("pointerover", (event) => {
-    cursor.classList.toggle("is-hover", Boolean(event.target.closest(interactive)));
-  });
+  // The cursor morphs from a ring into an arrow as it nears a clickable element
+  const clickables = Array.from(document.querySelectorAll("a, button"));
+  const MORPH_RANGE = 90; // px from an element's edge where the morph starts
+  let morph = 0;
+
+  const distanceTo = (el, x, y) => {
+    const r = el.getBoundingClientRect();
+    const dx = Math.max(r.left - x, 0, x - r.right);
+    const dy = Math.max(r.top - y, 0, y - r.bottom);
+    return Math.hypot(dx, dy);
+  };
 
   const animate = () => {
     cx += (mx - cx) * 0.2;
     cy += (my - cy) * 0.2;
+
+    let nearest = Infinity;
+    for (const el of clickables) {
+      nearest = Math.min(nearest, distanceTo(el, cx, cy));
+      if (nearest === 0) break;
+    }
+    const t = Math.max(0, Math.min(1, 1 - nearest / MORPH_RANGE));
+    const target = t * t * (3 - 2 * t); // smoothstep
+    morph += (target - morph) * 0.25;
+
+    cursor.style.setProperty("--morph", morph.toFixed(3));
     cursor.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
     requestAnimationFrame(animate);
   };
