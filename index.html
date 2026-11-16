@@ -4,231 +4,185 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Jamie Brown — designer and developer. Portfolio, skills, and contact." />
-  <title>JAMIE BROWN // PORTFOLIO</title>
+  <title>Jamie Brown — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Pixel night city (rain, trains, traffic, flickering windows) -->
-  <canvas id="city" aria-hidden="true"></canvas>
-
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <span>◆ ON SHIFT</span><span>● OPEN FOR WORK</span><span>◆ REMOTE / UK</span><span>▲ BUILD 2026.11</span>
-      <span>◆ ON SHIFT</span><span>● OPEN FOR WORK</span><span>◆ REMOTE / UK</span><span>▲ BUILD 2026.11</span>
-    </div>
-  </div>
-
-  <header class="site-header">
-    <a href="#top" class="logo">JAMIE.BROWN</a>
-    <nav>
-      <a href="#work">WORK</a>
-      <a href="#systems">SKILLS</a>
-      <a href="#profile">ABOUT</a>
-      <a href="#contact">CONTACT</a>
+  <header class="topbar">
+    <a href="#hero" class="brand" data-go="0">Jamie Brown</a>
+    <nav aria-label="Slides">
+      <a href="#work" data-go="1">Work</a>
+      <a href="#skills" data-go="2">Skills</a>
+      <a href="#about" data-go="3">About</a>
+      <a href="#contact" data-go="4">Contact</a>
     </nav>
-    <div class="clock" id="clock">--:--:--</div>
   </header>
 
-  <main id="top">
+  <main class="deck" id="deck">
 
-    <!-- HERO: you at the desk, seen from the side -->
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="badge"><span class="blink-dot"></span> AVAILABLE FOR WORK</p>
-        <h1>I BUILD <span class="hl">WEB</span><br />EXPERIENCES.</h1>
+    <!-- 01 HERO -->
+    <section class="slide" id="hero" aria-label="Introduction">
+      <div class="slide-inner">
+        <p class="eyebrow"><span class="dot"></span>Available for work</p>
+        <h1>I build <em>web experiences</em> that feel considered.</h1>
         <p class="lead">
-          Designer and developer making fast, accessible, and charming websites and apps.
-          Pixel-perfect on purpose.
+          Designer and developer making fast, accessible and well-crafted websites and apps.
         </p>
-        <div class="cta">
-          <a href="#work" class="btn btn-primary">VIEW WORK</a>
-          <a href="#contact" class="btn btn-ghost">CONTACT ME</a>
+        <div class="actions">
+          <a href="#work" class="btn btn-primary" data-go="1">See the work</a>
+          <a href="#contact" class="btn" data-go="4">Get in touch</a>
         </div>
-        <div class="hero-meta">
-          <span>ID: JB-0001</span>
-          <span>REGION: UK / REMOTE</span>
-          <span>RESPONSE: &lt;48H</span>
-        </div>
-      </div>
-
-      <div class="desk" aria-hidden="true">
-        <canvas id="desk" width="240" height="150"></canvas>
+        <dl class="facts">
+          <div><dt>Based</dt><dd>UK · Remote</dd></div>
+          <div><dt>Response</dt><dd>Under 48 hours</dd></div>
+          <div><dt>Focus</dt><dd>Web design &amp; development</dd></div>
+        </dl>
       </div>
     </section>
 
-    <!-- STAT STRIP -->
-    <section class="strip" aria-label="Key figures">
-      <div class="pixel-frame strip-item"><small>PROJECTS</small><strong>01</strong></div>
-      <div class="pixel-frame strip-item"><small>LANGUAGES</small><strong>04</strong></div>
-      <div class="pixel-frame strip-item"><small>PERF GOAL</small><strong>100</strong></div>
-      <div class="pixel-frame strip-item"><small>COMMITS</small><strong>03</strong></div>
-    </section>
+    <!-- 02 WORK -->
+    <section class="slide" id="work" aria-label="Work">
+      <div class="slide-inner">
+        <header class="slide-head">
+          <span class="num">01</span>
+          <h2>Work</h2>
+        </header>
 
-    <!-- WORK -->
-    <section id="work" class="section">
-      <header class="section-head">
-        <span class="section-index">01</span>
-        <h2 class="section-title">WORK</h2>
-        <span class="section-meta">LIVE PROJECTS</span>
-      </header>
+        <div class="cards">
+          <a class="card" href="https://github.com/TinyBeanDev/portfolio" target="_blank" rel="noopener">
+            <span class="card-tag">Live · Open source</span>
+            <h3>This portfolio</h3>
+            <p>The site you're looking at. Static, no frameworks, responsive, built in plain HTML, CSS and JavaScript.</p>
+            <ul class="meta"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <span class="card-link">View on GitHub →</span>
+          </a>
 
-      <div class="grid">
-        <a class="card pixel-frame" href="https://github.com/TinyBeanDev/portfolio" target="_blank" rel="noopener">
-          <div class="card-thumb">
-            <span class="card-glyph">▣</span>
+          <div class="card card-muted">
+            <span class="card-tag">Coming next</span>
+            <h3>Next project</h3>
+            <p>Slot reserved. A case study goes here when the next build is ready to show.</p>
+            <ul class="meta"><li>TBA</li></ul>
           </div>
-          <div class="card-body">
-            <h3>THIS PORTFOLIO</h3>
-            <p>
-              The site you're looking at. Static, no frameworks, responsive, and built entirely in
-              plain HTML, CSS and JavaScript.
+        </div>
+
+        <p class="aside"><a href="https://github.com/TinyBeanDev" target="_blank" rel="noopener">More on GitHub →</a></p>
+      </div>
+    </section>
+
+    <!-- 03 SKILLS -->
+    <section class="slide" id="skills" aria-label="Skills">
+      <div class="slide-inner">
+        <header class="slide-head">
+          <span class="num">02</span>
+          <h2>Skills</h2>
+        </header>
+
+        <div class="skills">
+          <article>
+            <h3>Interface</h3>
+            <p>Semantic HTML, responsive layout, and components that stay maintainable as projects grow.</p>
+            <ul class="meta"><li>HTML5</li><li>CSS Grid</li><li>Flexbox</li><li>Accessibility</li></ul>
+          </article>
+          <article>
+            <h3>Logic</h3>
+            <p>Vanilla JavaScript when it's enough, React and Next.js when the app needs structure.</p>
+            <ul class="meta"><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Next.js</li></ul>
+          </article>
+          <article>
+            <h3>Design</h3>
+            <p>Layout, type and motion designed as one system, with contrast and reduced motion handled from the start.</p>
+            <ul class="meta"><li>UI</li><li>UX</li><li>Motion</li><li>Type</li></ul>
+          </article>
+          <article>
+            <h3>Delivery</h3>
+            <p>Small bundles, fast first paint, and a pipeline that takes a commit to a live URL.</p>
+            <ul class="meta"><li>Git</li><li>GitHub Pages</li><li>Lighthouse</li><li>CI</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 ABOUT -->
+    <section class="slide" id="about" aria-label="About">
+      <div class="slide-inner">
+        <header class="slide-head">
+          <span class="num">03</span>
+          <h2>About</h2>
+        </header>
+
+        <div class="about">
+          <div>
+            <p class="lead">
+              I'm a designer and developer who cares about the small stuff: performance, accessibility,
+              and the interactions that make a site feel alive.
             </p>
-            <dl class="card-specs">
-              <div><dt>TYPE</dt><dd>STATIC</dd></div>
-              <div><dt>HOST</dt><dd>GH PAGES</dd></div>
-              <div><dt>REPO</dt><dd>PUBLIC</dd></div>
-            </dl>
-            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <p class="muted">
+              Replace this with your own story: how you got into the web, what you enjoy most,
+              and what you're looking for next.
+            </p>
+            <ol class="timeline">
+              <li><span>2026.11</span> Portfolio v2 — redesigned with live GitHub links.</li>
+              <li><span>2026.11</span> Portfolio v1 — static site published to GitHub Pages.</li>
+              <li><span>TBA</span> Next case study or project page.</li>
+            </ol>
           </div>
-          <span class="card-arrow">▶</span>
-        </a>
 
-        <div class="card pixel-frame card-empty" aria-label="Upcoming project slot">
-          <div class="card-thumb">
-            <span class="card-glyph">?</span>
-          </div>
-          <div class="card-body">
-            <h3>NEXT PROJECT</h3>
-            <p>Slot reserved. Add a case study here when the next build is ready to show.</p>
-            <dl class="card-specs">
-              <div><dt>STATUS</dt><dd>LOCKED</dd></div>
-              <div><dt>TYPE</dt><dd>—</dd></div>
-              <div><dt>REPO</dt><dd>—</dd></div>
-            </dl>
-          </div>
+          <dl class="dossier">
+            <div><dt>Name</dt><dd>Jamie Brown</dd></div>
+            <div><dt>Role</dt><dd>Designer / developer</dd></div>
+            <div><dt>Location</dt><dd>UK · Remote</dd></div>
+            <div><dt>Status</dt><dd class="ok">Open to work</dd></div>
+            <div><dt>GitHub</dt><dd><a href="https://github.com/TinyBeanDev" target="_blank" rel="noopener">TinyBeanDev</a></dd></div>
+            <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/jamie-brown-472b2632a/" target="_blank" rel="noopener">jamie-brown</a></dd></div>
+          </dl>
         </div>
       </div>
-
-      <p class="more"><a href="https://github.com/TinyBeanDev" target="_blank" rel="noopener">MORE ON GITHUB ▶</a></p>
     </section>
 
-    <!-- SKILLS -->
-    <section id="systems" class="section">
-      <header class="section-head">
-        <span class="section-index">02</span>
-        <h2 class="section-title">SKILLS</h2>
-        <span class="section-meta">INVENTORY</span>
-      </header>
+    <!-- 05 CONTACT -->
+    <section class="slide" id="contact" aria-label="Contact">
+      <div class="slide-inner">
+        <header class="slide-head">
+          <span class="num">04</span>
+          <h2>Contact</h2>
+        </header>
 
-      <div class="systems-grid">
-        <article class="pixel-frame module">
-          <h3>INTERFACE</h3>
-          <p>Semantic HTML, responsive CSS layout, and components that stay maintainable as projects grow.</p>
-          <ul class="chips"><li>HTML5</li><li>CSS GRID</li><li>FLEXBOX</li><li>A11Y</li></ul>
-        </article>
+        <p class="lead">
+          Got a project, a role, or a question? Send a message and I'll reply within a day or two.
+        </p>
 
-        <article class="pixel-frame module">
-          <h3>LOGIC</h3>
-          <p>Vanilla JavaScript when it's enough, React and Next.js when the app needs structure.</p>
-          <ul class="chips"><li>JS</li><li>TS</li><li>REACT</li><li>NEXT.JS</li></ul>
-        </article>
-
-        <article class="pixel-frame module">
-          <h3>DESIGN</h3>
-          <p>Layout, type and motion designed as one system, with contrast and reduced-motion handled from the start.</p>
-          <ul class="chips"><li>UI</li><li>UX</li><li>MOTION</li><li>TYPE</li></ul>
-        </article>
-
-        <article class="pixel-frame module">
-          <h3>DELIVERY</h3>
-          <p>Small bundles, fast first paint, and a pipeline that takes a commit to a live URL.</p>
-          <ul class="chips"><li>GIT</li><li>PAGES</li><li>LIGHTHOUSE</li><li>CI</li></ul>
-        </article>
-      </div>
-
-      <div class="ledger pixel-frame">
-        <div class="ledger-row head"><span>SKILL</span><span>LEVEL</span><span>LAST</span></div>
-        <div class="ledger-row"><span>HTML &amp; CSS</span><span class="pips"><i></i><i></i><i></i><i></i><i class="off"></i></span><span>2026</span></div>
-        <div class="ledger-row"><span>JAVASCRIPT</span><span class="pips"><i></i><i></i><i></i><i></i><i class="off"></i></span><span>2026</span></div>
-        <div class="ledger-row"><span>REACT / NEXT</span><span class="pips"><i></i><i></i><i></i><i class="off"></i><i class="off"></i></span><span>2026</span></div>
-        <div class="ledger-row"><span>UI / UX</span><span class="pips"><i></i><i></i><i></i><i></i><i class="off"></i></span><span>2026</span></div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="profile" class="section">
-      <header class="section-head">
-        <span class="section-index">03</span>
-        <h2 class="section-title">ABOUT</h2>
-        <span class="section-meta">RIDER PROFILE</span>
-      </header>
-
-      <div class="profile-grid">
-        <div class="profile-text">
-          <p class="lead-small">
-            I'm a designer and developer who cares about the small stuff: performance, accessibility,
-            and the interactions that make a site feel alive.
-          </p>
-          <p>
-            Replace this with your own story: how you got into the web, what you enjoy most,
-            and what you're looking for next.
-          </p>
+        <div class="channels">
+          <a class="channel" href="mailto:hello@example.com">
+            <span class="channel-label">Email</span>
+            <strong>hello@example.com</strong>
+          </a>
+          <a class="channel" href="https://www.linkedin.com/in/jamie-brown-472b2632a/" target="_blank" rel="noopener">
+            <span class="channel-label">LinkedIn</span>
+            <strong>jamie-brown-472b2632a</strong>
+          </a>
+          <a class="channel" href="https://github.com/TinyBeanDev" target="_blank" rel="noopener">
+            <span class="channel-label">GitHub</span>
+            <strong>TinyBeanDev</strong>
+          </a>
         </div>
-
-        <aside class="pixel-frame dossier">
-          <div class="dossier-row"><span>NAME</span><strong>JAMIE BROWN</strong></div>
-          <div class="dossier-row"><span>ROLE</span><strong>DESIGNER / DEV</strong></div>
-          <div class="dossier-row"><span>LOCATION</span><strong>UK · REMOTE</strong></div>
-          <div class="dossier-row"><span>STATUS</span><strong class="ok">OPEN TO WORK</strong></div>
-          <div class="dossier-row"><span>GITHUB</span><strong><a href="https://github.com/TinyBeanDev" target="_blank" rel="noopener">TinyBeanDev</a></strong></div>
-          <div class="dossier-row"><span>LINKEDIN</span><strong><a href="https://www.linkedin.com/in/jamie-brown-472b2632a/" target="_blank" rel="noopener">jamie-brown</a></strong></div>
-        </aside>
-      </div>
-
-      <div class="timeline">
-        <div class="pixel-frame tl-item"><span class="tl-date">2026.11</span><h4>PORTFOLIO v2</h4><p>Pixel night city redesign with live GitHub links.</p></div>
-        <div class="pixel-frame tl-item"><span class="tl-date">2026.11</span><h4>PORTFOLIO v1</h4><p>Static site published to GitHub Pages.</p></div>
-        <div class="pixel-frame tl-item"><span class="tl-date">TBA</span><h4>NEXT LEVEL</h4><p>Add the next case study or project page.</p></div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section contact">
-      <header class="section-head">
-        <span class="section-index">04</span>
-        <h2 class="section-title">CONTACT</h2>
-        <span class="section-meta">SEND A SIGNAL</span>
-      </header>
-
-      <p class="contact-lead">Got a project, a role, or a question? Send a message and I'll reply within a day or two.</p>
-
-      <div class="channels">
-        <a class="channel pixel-frame" href="mailto:hello@example.com">
-          <span class="channel-label">EMAIL</span>
-          <strong>hello@example.com</strong>
-        </a>
-        <a class="channel pixel-frame" href="https://www.linkedin.com/in/jamie-brown-472b2632a/" target="_blank" rel="noopener">
-          <span class="channel-label">LINKEDIN</span>
-          <strong>jamie-brown-472b2632a</strong>
-        </a>
-        <a class="channel pixel-frame" href="https://github.com/TinyBeanDev" target="_blank" rel="noopener">
-          <span class="channel-label">GITHUB</span>
-          <strong>TinyBeanDev</strong>
-        </a>
-      </div>
-    </section>
   </main>
 
-  <footer class="site-footer">
-    <p>© <span id="year"></span> JAMIE BROWN · MADE IN THE RAIN</p>
-    <p class="small">THANKS FOR STOPPING BY</p>
+  <footer class="controls">
+    <button type="button" class="arrow" id="prev" aria-label="Previous slide">←</button>
+    <ol class="dots" id="dots" aria-label="Choose a slide"></ol>
+    <button type="button" class="arrow" id="next" aria-label="Next slide">→</button>
+    <span class="counter" id="counter">01 / 05</span>
+    <span class="clock" id="clock">--:--</span>
+    <span class="copy">© <span id="year"></span></span>
   </footer>
 
-  <script src="scene.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
