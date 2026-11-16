@@ -3,74 +3,269 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Jamie — designer and developer building clean, fast, thoughtful web experiences." />
-  <title>Jamie — Portfolio</title>
+  <meta name="description" content="Jamie Brown — designer and developer. Portfolio, skills, and contact." />
+  <title>JAMIE BROWN // PORTFOLIO</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- Top status ticker -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>SYS.STATUS: ONLINE</span><span>//</span>
+      <span>AVAILABILITY: OPEN FOR WORK</span><span>//</span>
+      <span>LOCATION: REMOTE / UK</span><span>//</span>
+      <span>BUILD: 2026.11</span><span>//</span>
+      <span>STACK: HTML / CSS / JS / REACT / NEXT</span><span>//</span>
+      <span>SYS.STATUS: ONLINE</span><span>//</span>
+      <span>AVAILABILITY: OPEN FOR WORK</span><span>//</span>
+      <span>LOCATION: REMOTE / UK</span><span>//</span>
+      <span>BUILD: 2026.11</span><span>//</span>
+      <span>STACK: HTML / CSS / JS / REACT / NEXT</span><span>//</span>
+    </div>
+  </div>
+
   <header class="site-header">
-    <a href="#top" class="logo">Jamie<span>.</span></a>
+    <a href="#top" class="logo">Jamie<span>.</span>Brown</a>
     <nav>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="https://github.com/TinyBeanDev" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/jamie-brown-472b2632a/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#work">01 Work</a>
+      <a href="#systems">02 Systems</a>
+      <a href="#profile">03 Profile</a>
+      <a href="#contact">04 Contact</a>
     </nav>
+    <div class="clock" id="clock">--:--:--</div>
   </header>
 
   <main id="top">
+
+    <!-- HERO -->
     <section class="hero">
-      <p class="eyebrow">Available for freelance & full-time work</p>
-      <h1>Hi, I'm Jamie. I design and build<br /><span class="gradient-text">modern web experiences.</span></h1>
-      <p class="lead">I craft fast, accessible, and visually refined websites and applications that help ideas land.</p>
-      <div class="cta">
-        <a href="#work" class="btn btn-primary">View my work</a>
-        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot"></span> Available for freelance &amp; full-time work</p>
+          <h1>Designer &amp; developer<br /><span class="gradient-text">building modern web experiences.</span></h1>
+          <p class="lead">
+            I craft fast, accessible, and visually refined websites and applications. Performance first,
+            details always, and no unnecessary weight in the page.
+          </p>
+          <div class="cta">
+            <a href="#work" class="btn btn-primary">View projects</a>
+            <a href="#contact" class="btn btn-ghost">Open a channel</a>
+          </div>
+          <div class="hero-meta">
+            <span>ID: JB-0001</span>
+            <span>CLEARANCE: PUBLIC</span>
+            <span>REGION: UK / REMOTE</span>
+          </div>
+        </div>
+
+        <aside class="hud-panel" aria-label="Profile readout">
+          <div class="hud-head">
+            <span>PROFILE.READOUT</span>
+            <span class="blink">● LIVE</span>
+          </div>
+          <div class="hud-body">
+            <div class="stat"><label>Focus</label><strong>Front-end / Product UI</strong></div>
+            <div class="stat"><label>Primary stack</label><strong>HTML · CSS · JS · React · Next.js</strong></div>
+            <div class="stat"><label>Response time</label><strong>&lt; 48 hours</strong></div>
+            <div class="stat"><label>Public repos</label><strong data-count="1">0</strong></div>
+            <div class="bars">
+              <div class="bar"><span>Design</span><i style="--w: 88%"></i><em>88</em></div>
+              <div class="bar"><span>Front-end</span><i style="--w: 92%"></i><em>92</em></div>
+              <div class="bar"><span>Performance</span><i style="--w: 85%"></i><em>85</em></div>
+              <div class="bar"><span>Accessibility</span><i style="--w: 80%"></i><em>80</em></div>
+            </div>
+          </div>
+          <div class="hud-foot">SCANNING... 0x7F3A · 0x21C9 · 0xE04B</div>
+        </aside>
       </div>
     </section>
 
+    <!-- STAT STRIP -->
+    <section class="strip" aria-label="Key figures">
+      <div class="strip-item"><small>Projects shipped</small><strong>01</strong><span>public repository</span></div>
+      <div class="strip-item"><small>Languages</small><strong>04</strong><span>HTML · CSS · JS · TS</span></div>
+      <div class="strip-item"><small>Lighthouse target</small><strong>100</strong><span>performance goal</span></div>
+      <div class="strip-item"><small>Commit history</small><strong>03</strong><span>on portfolio repo</span></div>
+    </section>
+
+    <!-- WORK -->
     <section id="work" class="section">
-      <h2 class="section-title">Selected work</h2>
+      <header class="section-head">
+        <span class="section-index">01</span>
+        <h2 class="section-title">Selected work</h2>
+        <span class="section-meta">SECTOR: WEB · STATUS: ACTIVE</span>
+      </header>
+
       <div class="grid">
         <a class="card" href="https://github.com/TinyBeanDev/portfolio" target="_blank" rel="noopener">
-          <div class="card-thumb" style="--hue: 260"></div>
-          <h3>This Portfolio</h3>
-          <p>The site you're looking at: a static, dependency-free page with responsive layout and reduced-motion support.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          <div class="card-thumb" style="--hue: 330">
+            <span class="card-code">PRJ-001</span>
+            <span class="card-year">2026</span>
+          </div>
+          <div class="card-body">
+            <h3>This Portfolio</h3>
+            <p>
+              The site you're looking at. Static, dependency-free, with a responsive layout,
+              reduced-motion support, and a HUD-style interface built in plain CSS.
+            </p>
+            <dl class="card-specs">
+              <div><dt>Type</dt><dd>Static site</dd></div>
+              <div><dt>Hosting</dt><dd>GitHub Pages</dd></div>
+              <div><dt>Repo</dt><dd>public</dd></div>
+            </dl>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          </div>
+          <span class="card-arrow">&rarr;</span>
         </a>
+
+        <div class="card card-empty" aria-label="Upcoming project slot">
+          <div class="card-thumb card-thumb-empty">
+            <span class="card-code">PRJ-002</span>
+            <span class="card-year">TBA</span>
+          </div>
+          <div class="card-body">
+            <h3>Next project</h3>
+            <p>Slot reserved. Add a case study here when the next build is ready to show.</p>
+            <dl class="card-specs">
+              <div><dt>Status</dt><dd>Reserved</dd></div>
+              <div><dt>Type</dt><dd>&mdash;</dd></div>
+              <div><dt>Repo</dt><dd>&mdash;</dd></div>
+            </dl>
+          </div>
+        </div>
       </div>
-      <p class="more"><a href="https://github.com/TinyBeanDev" target="_blank" rel="noopener">See more on GitHub &rarr;</a></p>
+
+      <p class="more"><a href="https://github.com/TinyBeanDev" target="_blank" rel="noopener">Full archive on GitHub &rarr;</a></p>
     </section>
 
-    <section id="about" class="section about">
-      <h2 class="section-title">About</h2>
-      <p>
-        I'm a designer and developer who cares about the details: performance, accessibility,
-        and the small interactions that make a site feel alive. Replace this paragraph with your
-        own story, skills, and what you're looking for next.
-      </p>
-      <ul class="skills">
-        <li>HTML &amp; CSS</li>
-        <li>JavaScript / TypeScript</li>
-        <li>React &amp; Next.js</li>
-        <li>UI / UX Design</li>
-      </ul>
+    <!-- SYSTEMS / SKILLS -->
+    <section id="systems" class="section">
+      <header class="section-head">
+        <span class="section-index">02</span>
+        <h2 class="section-title">Systems &amp; capabilities</h2>
+        <span class="section-meta">LOADOUT: ACTIVE</span>
+      </header>
+
+      <div class="systems-grid">
+        <article class="module">
+          <header><span>MOD.01</span><h3>Interface engineering</h3></header>
+          <p>Semantic HTML, responsive CSS layout, and component patterns that stay maintainable as a project grows.</p>
+          <ul class="chips"><li>HTML5</li><li>CSS Grid</li><li>Flexbox</li><li>A11y</li></ul>
+        </article>
+
+        <article class="module">
+          <header><span>MOD.02</span><h3>Front-end logic</h3></header>
+          <p>Vanilla JavaScript when it's enough, React and Next.js when the app needs structure.</p>
+          <ul class="chips"><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Next.js</li></ul>
+        </article>
+
+        <article class="module">
+          <header><span>MOD.03</span><h3>Visual design</h3></header>
+          <p>Layout, typography, and motion designed as one system, with contrast and reduced-motion handled from the start.</p>
+          <ul class="chips"><li>UI</li><li>UX</li><li>Motion</li><li>Type systems</li></ul>
+        </article>
+
+        <article class="module">
+          <header><span>MOD.04</span><h3>Performance &amp; delivery</h3></header>
+          <p>Small bundles, fast first paint, and deploy pipelines that take a commit to a live URL.</p>
+          <ul class="chips"><li>Git</li><li>GitHub Pages</li><li>Lighthouse</li><li>CI</li></ul>
+        </article>
+      </div>
+
+      <div class="ledger">
+        <div class="ledger-row"><span>SKILL</span><span>PROFICIENCY</span><span>LAST USED</span></div>
+        <div class="ledger-row"><span>HTML &amp; CSS</span><span class="pips"><i></i><i></i><i></i><i></i><i class="off"></i></span><span>2026</span></div>
+        <div class="ledger-row"><span>JavaScript</span><span class="pips"><i></i><i></i><i></i><i></i><i class="off"></i></span><span>2026</span></div>
+        <div class="ledger-row"><span>React / Next.js</span><span class="pips"><i></i><i></i><i></i><i class="off"></i><i class="off"></i></span><span>2026</span></div>
+        <div class="ledger-row"><span>UI / UX design</span><span class="pips"><i></i><i></i><i></i><i></i><i class="off"></i></span><span>2026</span></div>
+      </div>
     </section>
 
+    <!-- PROFILE / ABOUT -->
+    <section id="profile" class="section">
+      <header class="section-head">
+        <span class="section-index">03</span>
+        <h2 class="section-title">Profile</h2>
+        <span class="section-meta">FILE: DOSSIER.TXT</span>
+      </header>
+
+      <div class="profile-grid">
+        <div class="profile-text">
+          <p class="lead-small">
+            I'm a designer and developer who cares about the details: performance, accessibility, and the
+            small interactions that make a site feel alive.
+          </p>
+          <p>
+            Replace this with your own story: how you got into building for the web, what you enjoy most,
+            the kinds of problems you like solving, and what you're looking for next.
+          </p>
+          <p>
+            Keep it short and specific. A few concrete sentences about real work land better than
+            a long list of adjectives.
+          </p>
+        </div>
+
+        <aside class="dossier">
+          <div class="dossier-row"><span>NAME</span><strong>Jamie Brown</strong></div>
+          <div class="dossier-row"><span>ROLE</span><strong>Designer / Developer</strong></div>
+          <div class="dossier-row"><span>LOCATION</span><strong>UK · Remote</strong></div>
+          <div class="dossier-row"><span>LANGUAGES</span><strong>English</strong></div>
+          <div class="dossier-row"><span>STATUS</span><strong class="ok">Open to work</strong></div>
+          <div class="dossier-row"><span>GITHUB</span><strong><a href="https://github.com/TinyBeanDev" target="_blank" rel="noopener">TinyBeanDev</a></strong></div>
+          <div class="dossier-row"><span>LINKEDIN</span><strong><a href="https://www.linkedin.com/in/jamie-brown-472b2632a/" target="_blank" rel="noopener">jamie-brown-472b2632a</a></strong></div>
+        </aside>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item"><span class="tl-date">2026.11</span><h4>Portfolio v2 released</h4><p>Restyled with a HUD interface, live GitHub links, and a public repo.</p></div>
+        <div class="tl-item"><span class="tl-date">2026.11</span><h4>Portfolio v1 deployed</h4><p>Static site published to GitHub Pages from the main branch.</p></div>
+        <div class="tl-item"><span class="tl-date">TBA</span><h4>Next milestone</h4><p>Add the next case study, or a dedicated page for each project.</p></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact" class="section contact">
-      <h2 class="section-title">Let's work together</h2>
-      <p>Have a project in mind? Send me a message and I'll get back to you within a day or two.</p>
-      <div class="cta cta-center">
-        <a href="mailto:hello@example.com" class="btn btn-primary">hello@example.com</a>
-        <a href="https://www.linkedin.com/in/jamie-brown-472b2632a/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
-        <a href="https://github.com/TinyBeanDev" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+      <header class="section-head">
+        <span class="section-index">04</span>
+        <h2 class="section-title">Open a channel</h2>
+        <span class="section-meta">RESPONSE: &lt; 48H</span>
+      </header>
+
+      <p class="contact-lead">
+        Have a project, a role, or a question? Send a message and I'll reply within a day or two.
+      </p>
+
+      <div class="channels">
+        <a class="channel" href="mailto:hello@example.com">
+          <span class="channel-label">EMAIL</span>
+          <strong>hello@example.com</strong>
+          <span class="channel-arrow">&rarr;</span>
+        </a>
+        <a class="channel" href="https://www.linkedin.com/in/jamie-brown-472b2632a/" target="_blank" rel="noopener">
+          <span class="channel-label">LINKEDIN</span>
+          <strong>jamie-brown-472b2632a</strong>
+          <span class="channel-arrow">&rarr;</span>
+        </a>
+        <a class="channel" href="https://github.com/TinyBeanDev" target="_blank" rel="noopener">
+          <span class="channel-label">GITHUB</span>
+          <strong>TinyBeanDev</strong>
+          <span class="channel-arrow">&rarr;</span>
+        </a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Jamie. Built with care.</p>
+    <div class="footer-row">
+      <span>&copy; <span id="year"></span> JAMIE BROWN</span>
+      <span>BUILT WITH PLAIN HTML / CSS / JS</span>
+      <span>HOSTED ON GITHUB PAGES</span>
+    </div>
+    <div class="footer-row footer-small">
+      <span>NO TRACKING · NO FRAMEWORKS · NO EXCUSES</span>
+      <span>ALL RIGHTS RESERVED</span>
+    </div>
   </footer>
 
   <script src="script.js"></script>
